@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = Soundcloud::VERSION
   spec.authors       = ["Amit"]
   spec.email         = ["gudeamit148@gmail.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
-  spec.homepage      = ""
+  spec.summary       = %q{A ruby library for Soundcloud }
+  spec.description   = %q{This gem enables users to retreive permalinks for tracks uploaded by a particular user and also allows users to retrieve permalink_url for a playlist of user}
+  spec.homepage      = "https://github.com/amitgude/SoundCloudGem"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
