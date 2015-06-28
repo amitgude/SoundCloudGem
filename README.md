@@ -25,7 +25,7 @@ If username has multiple words, it should be hyphenated
 
 ```ruby
 
-Soundcloud.tracks("amit-gude")
+Soundcloud.playlist("amit-gude")
 
 ```
 
