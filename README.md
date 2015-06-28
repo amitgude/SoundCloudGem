@@ -20,7 +20,26 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Following code snippet is a example to retrieve permalinks of tracks of particular user
+If username has multiple words, it should be hyphenated
+
+```ruby
+
+Soundcloud.tracks("amit-gude")
+
+```
+
+
+Following code snippet is a example to retrieve permalinks of playlist of particular user
+If username or playlist name has multiple words, it should be hyphenated
+
+```ruby
+
+Soundcloud.tracks("amit-gude", "random-playlist")
+
+```
+
+
 
 ## Contributing
 
