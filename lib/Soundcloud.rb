@@ -8,11 +8,14 @@ module Soundcloud
   def self.tracks(username)
    user_id = find_user_id(username)
    tracks  = get("http://api.soundcloud.com/users/#{user_id}/tracks.json?client_id=b996850b65616c954995baf1721b3ac4")
-  end
+	   tracks.each_with_index.map do |track,i|
+	    	track["permalink_url"]
+	    end
+   end
 
   def self.playlist(username,playlist_name)
    playlist_id = find_playlist_id(username,playlist_name)
-   get("http://api.soundcloud.com/playlists/#{playlist_id}.json?client_id=b996850b65616c954995baf1721b3ac4")
+   playlist = get("http://api.soundcloud.com/playlists/#{playlist_id}.json?client_id=b996850b65616c954995baf1721b3ac4").parsed_response["permalink_url"]
   end
 
 end
@@ -26,3 +29,4 @@ private
   def find_playlist_id(username, playlist)
    get("http://api.soundcloud.com/resolve.json?url=http://soundcloud.com/#{username}/sets/#{playlist}&client_id=b996850b65616c954995baf1721b3ac4").parsed_response["id"]
   end
+
